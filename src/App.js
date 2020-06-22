@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import firebase from './firebase';
-import { database } from 'firebase';
 
 class App extends Component {
   constructor(){
@@ -97,7 +96,7 @@ deleteBtn = (wordId) =>{
     })
     }</div>
       </section>
-      <footer><p>Designed by <a href="www.shondamoshis.com">Shonda Moshis</a></p></footer>
+      <footer><p>Designed by <a href="http://www.shondamoshis.com">Shonda Moshis</a></p></footer>
     
     </div>
   );
