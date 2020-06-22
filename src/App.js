@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import firebase from './firebase';
+import { database } from 'firebase';
 
 class App extends Component {
   constructor(){
@@ -44,38 +45,58 @@ handleClick = (e)=>{
   dbRef.push(this.state.inputOne)
   dbRef.push(this.state.inputTwo)
   dbRef.push(this.state.inputThree)
-
+  
   this.setState({
     inputOne:'',
     inputTwo:'',
     inputThree:''
   })
 }
+deleteBtn = (wordId) =>{
+  const dbRef = firebase.database().ref()
+  dbRef.child(wordId).remove();
+}
  
   
 
   render(){
+
   return (
-    <div className="App wrapper">
+    <div className="App">
+      <header>
       <h1>Gratitude</h1>
+      </header>
+      <section className="explanationSection wrapper">
+      <div className="explanation">
       <h2>What is Gratitude?</h2>
-      <p>The quality of being thankful; readiness to show appreciation for and to return kindness.*</p>
-      <h2>Why is it important to practice Gratitude?</h2>
-      <p> People who regularly practice gratitude by taking time to notice and reflect upon the things they're thankful for experience more positive emotions, feel more alive, sleep better, express more compassion and kindness, and even have stronger immune systems.**</p>
+      <p>The quality of being thankful; readiness to show appreciation for and to return kindness.</p>
+      </div>
+        <div className="explanation">
+      <h2>The Importance of Gratitude</h2>
+      <p>Practicing gratitude allows you to focus on the present, appreciate what you have rather than what you do not have, and increases feelings of happiness.</p>
+      </div>
+      </section>
+      <section className="inputSection wrapper">
       <h3>Please share three things you are grateful for:</h3>
-      <input type="text" value={this.state.inputOne} name="inputOne" onChange={this.handleChange}/>
-      <input type="text" value={this.state.inputTwo} name="inputTwo" onChange={this.handleChange}/>
-      <input type="text" value={this.state.inputThree} name="inputThree" onChange={this.handleChange}/>
-      <button onClick={this.handleClick}>Add</button>
-  <ul>{
+      <form action="submit" className="inputForm">
+          <input required type="text" value={this.state.inputOne} name="inputOne" onChange={this.handleChange}/>
+          <input required type="text" value={this.state.inputTwo} name="inputTwo" onChange={this.handleChange}/>
+          <input required type="text" value={this.state.inputThree} name="inputThree" onChange={this.handleChange}/>
+        <button type="submit" onClick={this.handleClick}>Add</button>
+      </form>
+      
+  <div className="responseArea">{
     this.state.userInput.map((word)=>{
       return(
-        <li key={word.id}>
-          <p>{word.item}</p>
-        </li>
+        <div className="inputContainer">
+          
+          <p key={word.id}>{word.item}</p><button onClick={()=>this.deleteBtn(word.id)} className="deleteBtn">X</button>
+          
+        </div>
       )
     })
-    }</ul>
+    }</div>
+      </section>
       <footer><p>Designed by <a href="www.shondamoshis.com">Shonda Moshis</a></p></footer>
     
     </div>
