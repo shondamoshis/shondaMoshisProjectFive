@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import firebase from './firebase';
+import Form from './Form';
 
 class App extends Component {
   constructor(){
@@ -12,6 +13,7 @@ class App extends Component {
     inputThree:''
   }
 }
+
 
 componentDidMount(){
   const dbRef = firebase.database().ref();
@@ -31,26 +33,8 @@ componentDidMount(){
 
 }
 
-handleChange = (event)=>{
-this.setState({
-  [event.target.name]:event.target.value
-})
-}
-handleClick = (e)=>{
-  e.preventDefault();
 
-  const dbRef = firebase.database().ref()
-  
-  dbRef.push(this.state.inputOne)
-  dbRef.push(this.state.inputTwo)
-  dbRef.push(this.state.inputThree)
-  
-  this.setState({
-    inputOne:'',
-    inputTwo:'',
-    inputThree:''
-  })
-}
+
 deleteBtn = (wordId) =>{
   const dbRef = firebase.database().ref()
   dbRef.child(wordId).remove();
@@ -77,14 +61,9 @@ deleteBtn = (wordId) =>{
       </section>
       <section className="inputSection wrapper">
       <h3>Please share three things you are grateful for:</h3>
-      <form action="submit" className="inputForm">
-          <input required type="text" value={this.state.inputOne} name="inputOne" onChange={this.handleChange}/>
-          <input required type="text" value={this.state.inputTwo} name="inputTwo" onChange={this.handleChange}/>
-          <input required type="text" value={this.state.inputThree} name="inputThree" onChange={this.handleChange}/>
-        <button type="submit" onClick={this.handleClick}>Add</button>
-      </form>
+      <Form />
       
-  <div className="responseArea">{
+        <div className="responseArea">{
     this.state.userInput.map((word)=>{
       return(
         <div className="inputContainer">

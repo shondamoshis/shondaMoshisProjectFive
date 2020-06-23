@@ -39,9 +39,10 @@ h3{
 .inputContainer{
   display: flex;
   background: #F2D7EE;
-  width:20%;
   justify-content: space-evenly;
   border-radius:12px;
+  width: 15vw;
+  margin-top: 5%;
 }
 input{
   width:20%;
@@ -72,7 +73,11 @@ button:active{
 .responseArea{
   display: flex;
   justify-content: space-evenly;
-  margin-top: 50px;
+  margin-top: 10%;
+  width: 65%;
+  padding-left: 13%;
+  margin-left: 10%;
+  flex-wrap: wrap;
 }
 
 .deleteBtn{
