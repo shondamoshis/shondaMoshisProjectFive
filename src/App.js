@@ -45,7 +45,7 @@ deleteBtn = (wordId) =>{
   render(){
 
   return (
-    
+
     <div className="App">
 
       <header>
@@ -74,6 +74,8 @@ deleteBtn = (wordId) =>{
       </section>
 
       <section className="inputSection wrapper">
+
+        <h3>Let's create an adbundance of gratitude!</h3>
 
         <h3>Please share three things you are grateful for:</h3>
 
