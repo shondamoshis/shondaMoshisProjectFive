@@ -45,37 +45,60 @@ deleteBtn = (wordId) =>{
   render(){
 
   return (
+    
     <div className="App">
+
       <header>
-      <h1>Gratitude</h1>
+
+        <h1>Gratitude</h1>
+
       </header>
+
       <section className="explanationSection wrapper">
-      <div className="explanation">
-      <h2>What is Gratitude?</h2>
-      <p>The quality of being thankful; readiness to show appreciation for and to return kindness.</p>
-      </div>
+
         <div className="explanation">
-      <h2>The Importance of Gratitude</h2>
-      <p>Practicing gratitude allows you to focus on the present, appreciate what you have rather than what you do not have, and increases feelings of happiness.</p>
-      </div>
+
+          <h2>What is Gratitude?</h2>
+
+            <p>The quality of being thankful; readiness to show appreciation for and to return kindness.</p>
+
+        </div>
+
+        <div className="explanation">
+
+          <h2>The Importance of Gratitude</h2>
+
+            <p>Practicing gratitude allows you to focus on the present, appreciate what you have rather than what you do not have, and increases feelings of happiness.</p>
+        </div>
+
       </section>
+
       <section className="inputSection wrapper">
-      <h3>Please share three things you are grateful for:</h3>
+
+        <h3>Please share three things you are grateful for:</h3>
+
       <Form />
       
         <div className="responseArea">{
-    this.state.userInput.map((word)=>{
-      return(
-        <div className="inputContainer">
+
+            this.state.userInput.map((word)=>{
+
+                return(
+
+                  <div className="inputContainer">
           
-          <p key={word.id}>{word.item}</p><button onClick={()=>this.deleteBtn(word.id)} className="deleteBtn">X</button>
+                      <p key={word.id}>{word.item}</p><button onClick={()=>this.deleteBtn(word.id)} className="deleteBtn">X</button>
           
-        </div>
-      )
-    })
-    }</div>
+                  </div>
+                      )
+            })
+        }</div>
       </section>
-      <footer><p>Designed by <a href="http://www.shondamoshis.com">Shonda Moshis</a></p></footer>
+      <footer>
+
+        <p>Designed by <a href="http://www.shondamoshis.com">Shonda Moshis</a></p>
+
+      </footer>
     
     </div>
   );

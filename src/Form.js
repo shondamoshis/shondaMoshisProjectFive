@@ -44,10 +44,15 @@ class Form extends Component{
     render() {
         return (
             <form ref={this.scrollDiv} onSubmit={this.handleSubmit} className="inputForm">
+
                 <input required type="text" value={this.state.inputOne} name="inputOne" onChange={this.handleChange} />
+
                 <input required type="text" value={this.state.inputTwo} name="inputTwo" onChange={this.handleChange} />
+
                 <input required type="text" value={this.state.inputThree} name="inputThree" onChange={this.handleChange} />
+
                 <button type="submit" onSubmit={this.handleSubmit} onClick={this.scrollSmoothHandler}>Add</button>
+                
             </form>
         )
     }

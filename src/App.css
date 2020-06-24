@@ -2,10 +2,10 @@ body{
   background:#A5668B;
 }
 h1{
-font-family: 'Ubuntu',sans serif;
-font-size: 5rem;
-text-align: center;
-color:#0E103D
+  font-family: 'Ubuntu',sans serif;
+  font-size: 5rem;
+  text-align: center;
+  color:#0E103D
 }
 h2,h3{
   font-family: 'Ubuntu',sans-serif;
@@ -19,8 +19,8 @@ p, a, li, input{
 
 }
 .explanationSection{
- display: flex;
- justify-content: space-between;
+  display: flex;
+  justify-content: space-evenly;
   
 }
 .explanation{
@@ -98,5 +98,65 @@ a:hover, a:focus{
 }
 a{
   text-decoration: none;
+}
+
+/* Media Queries: */
+@media(max-width:1000px){
+  input{
+    width:30%;
+  }
+}
+@media(max-width:795px){
+   button{
+    width:20%;
+  }
+  .inputContainer{
+    width:40%;
+  }
+  input{
+    width:40%;
+  }
+}
+@media(max-width:580px){
+  h1{
+    font-size: 4rem;
+  }
+  h2,h3{
+    font-size: 2rem;
+  }
+  p,a,li,input{
+    font-size: 22px;
+  }
+  .explanationSection{
+    flex-direction: column;
+    align-items: center;
+  }
+  .explanation{
+    width:90%;
+    height: 35vh;
+    margin-top: 5%;
+  }
+  .responseArea{
+    width:90%;
+    padding-left: 0;
+    margin-left: 5%;
+    justify-content: space-around;
+  }
+  input{
+    width:50%
+  }
+}
+@media(max-width:450px){
+  .explanation{
+    height:40vh;
+  }
+}
+@media(max-width:370px){
+  .explanation{
+    height:45vh;
+  }
+  input{
+    width:60%;
+  }
 }
 
