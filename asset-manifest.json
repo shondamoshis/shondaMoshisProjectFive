@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/practice-gratitude/static/css/main.7ac7305f.chunk.css",
-    "main.js": "/practice-gratitude/static/js/main.4fc2a5cb.chunk.js",
-    "main.js.map": "/practice-gratitude/static/js/main.4fc2a5cb.chunk.js.map",
-    "runtime-main.js": "/practice-gratitude/static/js/runtime-main.6116e539.js",
-    "runtime-main.js.map": "/practice-gratitude/static/js/runtime-main.6116e539.js.map",
-    "static/js/2.02c0a25a.chunk.js": "/practice-gratitude/static/js/2.02c0a25a.chunk.js",
-    "static/js/2.02c0a25a.chunk.js.map": "/practice-gratitude/static/js/2.02c0a25a.chunk.js.map",
-    "index.html": "/practice-gratitude/index.html",
-    "precache-manifest.752a4b224454c72d539efe56e711fb72.js": "/practice-gratitude/precache-manifest.752a4b224454c72d539efe56e711fb72.js",
-    "service-worker.js": "/practice-gratitude/service-worker.js",
-    "static/css/main.7ac7305f.chunk.css.map": "/practice-gratitude/static/css/main.7ac7305f.chunk.css.map",
-    "static/js/2.02c0a25a.chunk.js.LICENSE.txt": "/practice-gratitude/static/js/2.02c0a25a.chunk.js.LICENSE.txt"
+    "main.css": "/shondaMoshisProjectFive/static/css/main.7ac7305f.chunk.css",
+    "main.js": "/shondaMoshisProjectFive/static/js/main.17c20333.chunk.js",
+    "main.js.map": "/shondaMoshisProjectFive/static/js/main.17c20333.chunk.js.map",
+    "runtime-main.js": "/shondaMoshisProjectFive/static/js/runtime-main.2f1721cd.js",
+    "runtime-main.js.map": "/shondaMoshisProjectFive/static/js/runtime-main.2f1721cd.js.map",
+    "static/js/2.a3c087ee.chunk.js": "/shondaMoshisProjectFive/static/js/2.a3c087ee.chunk.js",
+    "static/js/2.a3c087ee.chunk.js.map": "/shondaMoshisProjectFive/static/js/2.a3c087ee.chunk.js.map",
+    "index.html": "/shondaMoshisProjectFive/index.html",
+    "precache-manifest.08f914b570386129272a0f24a8790155.js": "/shondaMoshisProjectFive/precache-manifest.08f914b570386129272a0f24a8790155.js",
+    "service-worker.js": "/shondaMoshisProjectFive/service-worker.js",
+    "static/css/main.7ac7305f.chunk.css.map": "/shondaMoshisProjectFive/static/css/main.7ac7305f.chunk.css.map",
+    "static/js/2.a3c087ee.chunk.js.LICENSE.txt": "/shondaMoshisProjectFive/static/js/2.a3c087ee.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6116e539.js",
-    "static/js/2.02c0a25a.chunk.js",
+    "static/js/runtime-main.2f1721cd.js",
+    "static/js/2.a3c087ee.chunk.js",
     "static/css/main.7ac7305f.chunk.css",
-    "static/js/main.4fc2a5cb.chunk.js"
+    "static/js/main.17c20333.chunk.js"
   ]
 }
